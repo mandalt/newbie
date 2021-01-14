@@ -1,3 +1,20 @@
+#logistic equation
+
+def log():
+    x0=np.random.rand(10)
+    t=np.arange(20)
+    out=np.zeros([len(x0),len(t)])
+    out[:,0]=x0
+    for j in range(1,len(t)):
+        out[:,j]=2*out[:,j-1]*(1-out[:,j-1])
+    return out
+
+z=log()
+t=np.arange(19)
+plt.scatter(t,z[4,1:]) 
+
+
+
 #logistic map bifurcation diagram
 
 import numpy as np
